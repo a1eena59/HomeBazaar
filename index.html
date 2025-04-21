@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEBAZAAR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+        }
+        header {
+            background-color: #4a6fa5;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #ffffff;
+            color: #4a6fa5;
+        }
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #4a6fa5;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .reviews-section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .reviews-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .review-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #4a6fa5;
+        }
+        .stars {
+            color: #f9ca24;
+            margin-top: 0.5rem;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">HomeBazaar</div>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>From Home to Heart</h1>
+        <p>Connect with the best local shops, restaurants, and service providers in your community.</p>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for local businesses, services, or products...">
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2>What People Are Saying</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">JD</div>
+                    <div>
+                        <h3>Tanvi Singh</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Found the most amazing bakery through HomeBazaar. Their samosas are incredible!"</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">AS</div>
+                    <div>
+                        <h3>Isha Patel</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"The handmade jewelry shop I discovered through HomeBazaar has become my go-to for gifts."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">RJ</div>
+                    <div>
+                        <h3>Robert Jacob</h3>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                </div>
+                <p>"Great platform to find local contractors. Saved me time and found quality service."</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HomeBazaar - Supporting home businesses everywhere</p>
+    </footer>
+
+    <script>
+        // Simple script to handle the search functionality
+        const searchBar = document.querySelector('.search-bar');
+        searchBar.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                alert('Search functionality would connect to a database of local businesses.');
+            }
+        });
+    </script>
+</body>
+</html>
